@@ -12,7 +12,7 @@ if not set -q __fish_config_dir
     end
 end
 
-set -l cwd (pwd)
+set -l cwd (dirname (readlink -m (status --current-filename)))
 set -l custom_file {$cwd}/config.fish
 set -l config_file {$__fish_config_dir}/config.fish
 
