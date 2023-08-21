@@ -4,11 +4,11 @@ Configuration file of fish.
 
 ## Usage
 
-1. Clone this repo as `{$__fish_config_dir}/custom`.
+1. Clone this repo.
     ```bash
-    $ git clone https://github.com/ulic-youthlic/Dotfile-Fish.git {$__fish_config_dir}/custom
+    $ git clone https://github.com/ulic-youthlic/Dotfile-Fish.git
     ```
-2. Source `{$__fish_config_dir}/custom/init.fish`.
+2. Source it.
     ```bash
-    $ echo source "{$__fish_config_dir}/custom/init.fish" >> {$__fish_config_dir}/config.fish
+    $ chmod +x ./init.fish && ./init.fish
     ```
