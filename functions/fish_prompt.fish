@@ -35,5 +35,10 @@ function fish_prompt --description 'Informative prompt'
 
     printf '%s%s%s' (set_color $fish_color_normal) (fish_vcs_prompt)
 
+    if test $TERM = 'linux'
+        printf " power:%d%%" (cat /sys/class/power_supply/BAT0/capacity)
+    end
+
+
     echo -e '\n> '
 end
