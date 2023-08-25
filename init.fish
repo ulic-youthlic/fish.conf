@@ -1,5 +1,7 @@
 #!/usr/bin/env fish
 
+# Check whether `__fish_config_dir` exists
+# If not find `__fish_config_dir`, make this dir and set default `__fish_config_dir` to `$HOME/.config/fish`
 if not set -q __fish_config_dir
     echo 'Cannot find variable, __fish_config_dir'
     printf "Do you want to `mkdir -p %s`, and set it as __fish_config_dir?(y/n)\n" "$HOME/.config/fish"
@@ -12,6 +14,7 @@ if not set -q __fish_config_dir
     end
 end
 
+# Set local variable
 set -l cwd (dirname (readlink -m (status --current-filename)))
 set -l custom_file {$cwd}/config.fish
 set -l config_file {$__fish_config_dir}/config.fish
