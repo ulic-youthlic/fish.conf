@@ -40,5 +40,6 @@ function fish_prompt --description 'Informative prompt'
     end
 
 
-    echo -e '\n> '
+    set -l PS1 '>'
+    echo -e '\n'$PS1' '
 end
