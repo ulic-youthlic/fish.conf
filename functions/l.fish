@@ -1,4 +1,4 @@
 function l --wraps='ls -at' --description 'alias l ls -at'
-  ls -at $argv
+  ls -At $argv
         
 end
