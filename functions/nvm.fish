@@ -5,6 +5,8 @@ if not set -q NVM_DIR
         set -g NVM_DIR {$HOME}/.nvm
     end
 end
-function nvm
-    bass source {$NVM_DIR}/nvm.sh --no-use ';' nvm $argv
+if set -q NVM_DIR
+    function nvm
+        bass source {$NVM_DIR}/nvm.sh --no-use ';' nvm $argv
+    end
 end
