@@ -39,3 +39,10 @@ else
     rm $old_plugins
 end
 ln -s $new_plugins $old_plugins
+
+# Install plugins
+if functions -q fisher
+    fisher update
+else
+    echo "WARN: Can't find plugin manager, `fisher`."
+end
