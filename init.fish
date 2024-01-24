@@ -52,6 +52,18 @@ else
 end
 ln -s $new_plugins $old_plugins
 
+# Set fish as default shell
+set -l default_shell (awk -F: -v user=(whoami) '$1 == user {print $NF}' /etc/passwd)
+if string match --regex bash "$default_shell" 1> /dev/null
+    echo "Default shell is $default_shell"
+    echo "Does bash start the fish shell by default?(y/n)"
+    read confirm
+    if test "$confirm" = "y"
+        cat $cwd/bashrc.sample >> $HOME/.bashrc
+    end
+end
+
+
 # Install plugins
 if functions -q fisher
     fisher update
