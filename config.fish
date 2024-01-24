@@ -1,5 +1,4 @@
 #!/usr/bin/env fish
-set -gx PAGER nvimpager
 set -l cwd (dirname (readlink -m (status --current-filename)))
 set -U fish_greeting "Welcome! This is fish."
 
@@ -12,6 +11,11 @@ fish_config theme choose "Catppuccin Macchiato"
 set fish_function_path $fish_function_path[1]\
                        $cwd/functions\
                        $fish_function_path[2..-1]
+
+# Nvimpager
+if command -q nvimpager
+    set -gx PAGER nvimpager
+end
 
 # Rust
 if command -q cargo
