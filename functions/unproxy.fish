@@ -1,4 +1,4 @@
-if command -q clash
+if functions -q proxy
     function unproxy
         set -e HTTP_PROXY
         set -e HTTPS_PROXY
