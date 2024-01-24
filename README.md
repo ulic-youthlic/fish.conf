@@ -12,7 +12,7 @@ Configuration file of fish.
 
 1. Clone this repo.
     ```bash
-    $ git clone https://github.com/ulic-youthlic/Dotfile-Fish.git
+    $ git clone https://github.com/ulic-youthlic/Dotfile-Fish.git && cd Dotfile-Fish
     ```
 2. Source it.
     ```bash
