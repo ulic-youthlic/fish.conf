@@ -6,7 +6,7 @@ if not set -q __fish_config_dir
     echo 'Cannot find variable, __fish_config_dir'
     printf "Do you want to `mkdir -p %s`, and set it as __fish_config_dir?(y/n)\n" "$HOME/.config/fish"
     read choice
-    if test "$choice" = 'y'
+    if test "$choice" = "y"
         mkdir -p {$HOME}/.config/fish
         set -gx __fish_config_dir {$HOME}/.config/fish
     else
@@ -28,6 +28,18 @@ if not test -e $config_file; or not cat $config_file | grep $custom_file > /dev/
     echo ''
 end
 
+# check whether wsl env or not
+set -l wsl_file $cwd/.wsl
+echo "Check if it is a WSL environment..."
+if not test -e $wsl_file
+    echo 'Is it wsl?(y/n)'
+    read wsl
+    if test "$wsl" = "y"
+        touch $wsl_file
+    end
+end
+
+# Deal with plugins file
 set -l old_plugins {$__fish_config_dir}/fish_plugins
 set -l new_plugins {$cwd}/fish_plugins
 if not test -e $old_plugins
