@@ -1,6 +1,8 @@
-# Dotfile-Fish
+# fish.conf
 
 Configuration file of fish.
+
+> It used to be called `Dotfile-Fish`.
 
 ## Dependencies
 1. `fisher`: the manager of fish plugins.
