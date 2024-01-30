@@ -31,3 +31,12 @@ end
 if command -q pipx
     set PATH $PATH $HOME/.local/bin
 end
+
+# set NVM-DIR
+if not set -q NVM_DIR
+    if test -e /usr/share/nvm
+        set -xg NVM_DIR /usr/share/nvm
+    else if test -e {$HOME}/.nvm
+        set -xg NVM_DIR {$HOME}/.nvm
+    end
+end
