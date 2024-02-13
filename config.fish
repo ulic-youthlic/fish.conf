@@ -1,6 +1,5 @@
 #!/usr/bin/env fish
 set -l cwd (dirname (readlink -m (status --current-filename)))
-set -U fish_greeting "Welcome! This is fish."
 
 # Personal config
 fish_vi_key_bindings
