@@ -1,4 +1,4 @@
-if command -q clash
+if command -q clash; or command -q mihomo
     function proxy
         echo 127.0.0.1
         set -gx http_proxy 'http://127.0.0.1:7890'
