@@ -14,7 +14,7 @@ Configuration file of fish.
 
 1. Clone this repo.
     ```bash
-    $ git clone https://github.com/ulic-youthlic/Dotfile-Fish.git && cd Dotfile-Fish
+    $ git clone https://github.com/ulic-youthlic/fish.conf.git && cd fish.conf
     ```
 2. Source it.
     ```bash
