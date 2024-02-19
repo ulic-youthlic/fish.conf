@@ -3,5 +3,7 @@ function fish_greeting
         zeitfetch
     else if command -q neofetch
         neofetch
+    else
+        _warn_no_command zeitfetch
     end
 end
