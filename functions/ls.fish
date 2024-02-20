@@ -1,5 +1,5 @@
 if command -q eza
     function ls
-        eza --icons=always $argv
+        eza --icons=auto $argv
     end
 end
