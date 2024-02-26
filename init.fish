@@ -113,3 +113,12 @@ echo "==> Finish dealing with default shell"
 
 # Init finished
 echo "Init finished"
+echo "The following thing is recommanded:"
+echo ''
+printf "  1. Set `BASE_CONFIG_DIR` env var in your %s.\n" "$config_file"
+printf "    set -gx BASE_CONFIG_DIR '<path/to/base.conf/dir>' # Appending this line to %s\n" "$config_file"
+echo "    # If you donot know what is base.conf doing, see README.md"
+echo "  2. Update your fish plugins, or install fisher first."
+echo "    \$ fisher update"
+echo ""
+echo "Thank you for using this configuration."
