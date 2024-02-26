@@ -1,7 +1,7 @@
 #!/usr/bin/env fish
 
 function block_key
-    echo -e "Input any kay to continue: "
+    echo -e "Input any key to continue: "
     read wait
 end
 
