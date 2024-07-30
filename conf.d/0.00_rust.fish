@@ -1,9 +1,7 @@
-if command -q cargo
-    if set -q CARGO_HOME
-        fish_add_path -amg $CARGO_HOME/bin
-    else
-        fish_add_path -amg $HOME/.cargo/bin
-    end
+if set -q CARGO_HOME
+    fish_add_path -amg $CARGO_HOME/bin
+else if test -d $HOME/.cargo/bin
+    fish_add_path -amg $HOME/.cargo/bin
 else
     _warn_no_command cargo
 end
